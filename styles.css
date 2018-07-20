@@ -5,31 +5,47 @@ header {
   grid-template-rows: 1fr, 1fr;
 }
 
+p, h1, li {
+  font-family: 'ABeeZee', sans-serif;
+}
 
 .title-header {
   color: white;
   grid-row: 2 / span 1 ;
   grid-column: 2 / span 1;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 .shares {
   margin-left: 8px;
 }
 
-.admin-user{
-  color: white;
+.admin-user {
+/*  float: right;*/
+  margin-left: 25em;
+  color: #0091FF;
   padding-bottom: 2em;
-  grid-row: 1 / span 1 ;
   grid-column: 2 / span 1;
+  grid-row: 1 / span 1 ;
 }
 
- ul, li {
+.admission-tab, .ad-pic {
+  margin: 1em;
+  padding-right: 5em;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1 ;
+}
+
+.nav {
+  grid-column: 1 / span 1; 
+  grid-row: 2 / span 1;
+} 
+
+li {
   display: inline-block; 
   margin-right: 2em;
   list-style: none;
   color: white;
-  grid-column: 1 / span 1 
-  grid-row: 2 / span 1;
 }
 
 .main-content {
@@ -41,7 +57,7 @@ header {
 }
 
 article {
-  border-style: solid;
+  border-style: outset;
   margin: 2px;
 }
 
@@ -50,10 +66,21 @@ article {
   padding: 50px;
 }
 
+.arrow-pic {
+  height: 5em;
+  width: 5em;
+}
+
+.menu-tab, .share-tab, .person-tab, .admission-tab {
+  height: 1em;
+  width: 1em;
+  margin: 0px 11px 0px 0px;
+  justify-content: center;
+  align-items: center;
+}
 .rec-name, .playlist, .website-area, .number, .attachments {
   margin: 10px;
 }
-
 
 .number {
   color: #0091FF;
