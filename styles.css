@@ -1,8 +1,13 @@
 header {
+  width: 100%;
   display: grid;
-  background-color: black;
+  background-color: #2C2D2D;
   grid-template-columns: 1fr, 1fr;
   grid-template-rows: 1fr, 1fr;
+}
+
+body {
+  background-color: lightgrey;
 }
 
 p, h1, li {
@@ -10,30 +15,60 @@ p, h1, li {
 }
 
 .title-header {
+  color: #2C2D2D;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 4em;
   color: white;
   grid-row: 2 / span 1 ;
   grid-column: 2 / span 1;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Fredericka the Great', cursive;
 }
 
 .shares {
-  margin-left: 8px;
+  font-size: 2.5em;
+  margin-left: .7em;
 }
 
+/*.admission-tab {
+margin: 10em;
+
+}*/
+
 .admin-user {
-/*  float: right;*/
-  margin-left: 25em;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2em;
   color: #0091FF;
   padding-bottom: 2em;
   grid-column: 2 / span 1;
   grid-row: 1 / span 1 ;
 }
 
-.admission-tab, .ad-pic {
-  margin: 1em;
-  padding-right: 5em;
+.admin-user:hover {
+  color: white;
+}
+
+.admission-tab, .ad-pic, .arrow-down {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2.5em;
   grid-column: 2 / span 1;
   grid-row: 1 / span 1 ;
+}
+
+
+.arrow-down {
+  height: 1em;
+}
+
+.flower-header, .flower {
+  display: flex;
+  justify-content: flex-end;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1 ;
+  height: 4em;
+  margin-right: 2em;
 }
 
 .nav {
@@ -48,27 +83,112 @@ li {
   color: white;
 }
 
+li:hover {
+  color: #0091FF
+}
+
 .main-content {
+  padding: 1em;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   grid-template-rows: repeat(2, 1fr);
-  grid-gap: 5px;
-  margin: 5px;
+  grid-gap: 3px;
+  margin: 6px;
 }
 
-article {
+.first-box {
+  background-color: white;
+  height: 450px;
   border-style: outset;
+  border-width: thin;
   margin: 2px;
 }
 
+.image-1, .image-2, .image-3, .image-4, .image-5, .image-6, .image-7, .image-8, .image-9, .image-10 {
+  padding: 1em;
+  opacity: 0.9;
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: 1fr, 1fr;
+  background-repeat: no-repeat;
+  padding-bottom: 50px;
+  background-position: center;
+}
+
+.image-1:hover, .image-2:hover, .image-3:hover, .image-4:hover, .image-5:hover, .image-6:hover, .image-7:hover, .image-8:hover, .image-9:hover, .image-10:hover{
+  opacity: .5;
+}
+
 .image-1 {
-  background-color: grey;
-  padding: 50px;
+  background-image: url("images/unsplash103.jpg");
+  background-size: 400px 200px;
+}
+
+.image-4 {
+  background-image: url("images/michael-haslim-21018-unsplash.jpg");
+  background-size: 400px 200px;
+}
+.image-2 {
+  background-image: url("images/unsplash.jpg");
+  background-size: 400px 200px;
+}
+
+.image-3 {
+  background-image: url("images/unsplash2.jpg");
+  background-size: 400px 200px;
+}
+
+.image-5 {
+  background-image: url("images/unsplash4.jpg");
+  background-size: 400px 200px;
+}
+
+.image-6 {
+  background-image: url("images/unsplash-comp1.jpg");
+  background-size: 400px 200px;
+}
+
+.image-7 {
+  background-image: url("images/unsplash101.jpg");
+  background-size: 400px 200px;
+}
+
+.image-8 {
+  background-image: url("images/unsplash1001.jpg");
+  background-size: 400px 200px;
+}
+
+.image-9 {
+  background-image: url("images/unsplash104.jpg");
+  background-size: 400px 200px;
+}
+
+.image-10 {
+  background-image: url("images/unsplash1000.jpg");
+  background-size: 400px 200px;
 }
 
 .arrow-pic {
+  grid-column: 1 / span 1;
+  grid-row: 1 /span 1;
   height: 5em;
   width: 5em;
+  padding: 1em;
+}
+
+.views, .view-count {
+  display: flex;
+  justify-content: flex-end;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.view-count {
+  padding-top: .5em;
+}
+
+button:hover {
+  background-color: lightgrey; 
 }
 
 .menu-tab, .share-tab, .person-tab, .admission-tab {
@@ -80,11 +200,105 @@ article {
 }
 .rec-name, .playlist, .website-area, .number, .attachments {
   margin: 10px;
+  padding: .5em;
 }
 
 .number {
   color: #0091FF;
 }
 .website-area {
-  background-color: grey;
+  background-color: lightgrey;
+}
+
+@media screen and (max-width:1080px){
+
+.image-1, .image-2, .image-3, .image-4, .image-5, .image-6, .image-7, .image-8, .image-9, .image-10{
+background-size: 500px 300px;
+background-position: center;
+}
+}
+
+
+@media screen and (max-width:950px){
+.nav {
+  /*grid-column: 1 / span 1;*/ 
+  grid-row: 1 / span 1;
+} 
+
+}
+
+@media screen and (max-width:880px){
+.nav {
+  grid-column: 1 / span 2; 
+} 
+}
+
+@media screen and (max-width:750px){
+
+/*header {
+  display: grid;
+  background-color: #2C2D2D;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-rows: 1fr, 1fr, 1fr;
+}*/
+}
+@media screen and (max-width:710px){
+  .image-1, .image-2, .image-3, .image-4, .image-5, .image-6, .image-7, .image-8, .image-9, .image-10{
+background-size: 675px 475px;
+background-position: center;
+}
+.admin-user, .arrow-down {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    padding: 0;
+    justify-content: flex-start;
+}
+
+.admin-user {
+  margin-left: 2.8em;
+}
+}
+@media screen and (max-width:552px){
+header {
+  width: 200%;
+  grid-template-rows: 1fr, 1fr, 1fr;
+}
+
+.title-header, .flower-header, .flower{
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    justify-content: flex-start;
+  }
+
+.flower, .flower-header{
+  margin-left: 1em;
+}
+
+.title-header {
+    margin-left: 3.2em;
+}
+
+li {
+    padding-left: 11px;
+    display: block;
+  }
+}
+
+@media screen and (max-width:360px){
+  body {
+    margin: 0;
+  }
+  .main-content{
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+
+.title-header{
+  font-size: 1.5em;
+}
+.flower-header{
+  width: 3em;
+}
+p {
+  font-size: .8em;
+}
 }
