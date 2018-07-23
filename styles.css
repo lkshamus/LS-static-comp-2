@@ -1,9 +1,9 @@
 header {
-  width: 100%;
-  display: grid;
   background-color: #2C2D2D;
+  display: grid;
   grid-template-columns: 1fr, 1fr;
   grid-template-rows: 1fr, 1fr;
+  width: 100%;
 }
 
 body {
@@ -16,13 +16,13 @@ p, h1, li {
 
 .title-header {
   color: #2C2D2D;
+  color: white;
   display: flex;
+  font-family: 'Fredericka the Great', cursive;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1 ;
   justify-content: flex-end;
   padding-right: 4em;
-  color: white;
-  grid-row: 2 / span 1 ;
-  grid-column: 2 / span 1;
-  font-family: 'Fredericka the Great', cursive;
 }
 
 .shares {
@@ -30,19 +30,14 @@ p, h1, li {
   margin-left: .7em;
 }
 
-/*.admission-tab {
-margin: 10em;
-
-}*/
-
 .admin-user {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 2em;
   color: #0091FF;
-  padding-bottom: 2em;
+  display: flex;
   grid-column: 2 / span 1;
   grid-row: 1 / span 1 ;
+  justify-content: flex-end;
+  padding-bottom: 2em;
+  padding-right: 2em;
 }
 
 .admin-user:hover {
@@ -51,10 +46,10 @@ margin: 10em;
 
 .admission-tab, .ad-pic, .arrow-down {
   display: flex;
-  justify-content: flex-end;
-  padding-right: 2.5em;
   grid-column: 2 / span 1;
   grid-row: 1 / span 1 ;
+  justify-content: flex-end;
+  padding-right: 2.5em;
 }
 
 
@@ -64,10 +59,10 @@ margin: 10em;
 
 .flower-header, .flower {
   display: flex;
-  justify-content: flex-end;
   grid-column: 2 / span 1;
   grid-row: 2 / span 1 ;
   height: 4em;
+  justify-content: flex-end;
   margin-right: 2em;
 }
 
@@ -77,10 +72,10 @@ margin: 10em;
 } 
 
 li {
-  display: inline-block; 
-  margin-right: 2em;
-  list-style: none;
   color: white;
+  display: inline-block; 
+  list-style: none;
+  margin-right: 2em;
 }
 
 li:hover {
@@ -88,31 +83,31 @@ li:hover {
 }
 
 .main-content {
-  padding: 1em;
   display: grid;
+  grid-gap: 3px;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   grid-template-rows: repeat(2, 1fr);
-  grid-gap: 3px;
   margin: 6px;
+  padding: 1em;
 }
 
 .first-box {
   background-color: white;
-  height: 450px;
   border-style: outset;
   border-width: thin;
+  height: 450px;
   margin: 2px;
 }
 
 .image-1, .image-2, .image-3, .image-4, .image-5, .image-6, .image-7, .image-8, .image-9, .image-10 {
-  padding: 1em;
-  opacity: 0.9;
+  background-position: center;
+  background-repeat: no-repeat;
   display: grid;
   grid-template-columns: 1fr, 1fr;
   grid-template-rows: 1fr, 1fr;
-  background-repeat: no-repeat;
+  opacity: 0.9;
   padding-bottom: 50px;
-  background-position: center;
+  padding: 1em;
 }
 
 .image-1:hover, .image-2:hover, .image-3:hover, .image-4:hover, .image-5:hover, .image-6:hover, .image-7:hover, .image-8:hover, .image-9:hover, .image-10:hover{
@@ -172,15 +167,15 @@ li:hover {
   grid-column: 1 / span 1;
   grid-row: 1 /span 1;
   height: 5em;
-  width: 5em;
   padding: 1em;
+  width: 5em;
 }
 
 .views, .view-count {
   display: flex;
-  justify-content: flex-end;
   grid-column: 2 / span 1;
   grid-row: 1 / span 1;
+  justify-content: flex-end;
 }
 
 .view-count {
@@ -192,11 +187,11 @@ button:hover {
 }
 
 .menu-tab, .share-tab, .person-tab, .admission-tab {
-  height: 1em;
-  width: 1em;
-  margin: 0px 11px 0px 0px;
-  justify-content: center;
   align-items: center;
+  height: 1em;
+  justify-content: center;
+  margin: 0px 11px 0px 0px;
+  width: 1em;
 }
 .rec-name, .playlist, .website-area, .number, .attachments {
   margin: 10px;
@@ -213,18 +208,16 @@ button:hover {
 @media screen and (max-width:1080px){
 
 .image-1, .image-2, .image-3, .image-4, .image-5, .image-6, .image-7, .image-8, .image-9, .image-10{
-background-size: 500px 300px;
 background-position: center;
+background-size: 500px 300px;
 }
 }
 
 
 @media screen and (max-width:950px){
 .nav {
-  /*grid-column: 1 / span 1;*/ 
   grid-row: 1 / span 1;
 } 
-
 }
 
 @media screen and (max-width:880px){
@@ -233,25 +226,17 @@ background-position: center;
 } 
 }
 
-@media screen and (max-width:750px){
-
-/*header {
-  display: grid;
-  background-color: #2C2D2D;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-  grid-template-rows: 1fr, 1fr, 1fr;
-}*/
-}
 @media screen and (max-width:710px){
-  .image-1, .image-2, .image-3, .image-4, .image-5, .image-6, .image-7, .image-8, .image-9, .image-10{
-background-size: 675px 475px;
-background-position: center;
+.image-1, .image-2, .image-3, .image-4, .image-5, .image-6, .image-7, .image-8, .image-9, .image-10{
+  background-size: 675px 475px;
+  background-position: center;
 }
+
 .admin-user, .arrow-down {
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
-    padding: 0;
     justify-content: flex-start;
+    padding: 0;
 }
 
 .admin-user {
@@ -260,8 +245,8 @@ background-position: center;
 }
 @media screen and (max-width:552px){
 header {
-  width: 200%;
   grid-template-rows: 1fr, 1fr, 1fr;
+  width: 200%;
 }
 
 .title-header, .flower-header, .flower{
@@ -279,25 +264,28 @@ header {
 }
 
 li {
-    padding-left: 11px;
     display: block;
-  }
+    padding-left: 11px;
+}
 }
 
 @media screen and (max-width:360px){
-  body {
+body {
     margin: 0;
   }
-  .main-content{
+
+.main-content{
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 }
 
 .title-header{
   font-size: 1.5em;
 }
+
 .flower-header{
   width: 3em;
 }
+
 p {
   font-size: .8em;
 }
